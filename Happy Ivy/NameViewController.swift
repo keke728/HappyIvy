@@ -8,9 +8,15 @@
 
 import UIKit
 
-class NameViewController: UIViewController {
-
+class NameViewController: UIViewController, UITextFieldDelegate {
+     @IBOutlet weak var nameBox: UITextField!
+    
+     var user = NameInfo()
+     var name:String?
+     
+    
     override func viewDidLoad() {
+        nameBox.delegate = self
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

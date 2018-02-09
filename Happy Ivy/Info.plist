@@ -41,5 +41,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string></string>
+	</array>
+	<key>item0</key>
+	<string>AveriaSansLibre-Bold.ttfAveriaSansLibre-BoldItalic.ttfAveriaSansLibre-Italic.ttfAveriaSansLibre-Light.ttfAveriaSansLibre-LightItalic.ttfAveriaSansLibre-Regular.ttf</string>
 </dict>
 </plist>

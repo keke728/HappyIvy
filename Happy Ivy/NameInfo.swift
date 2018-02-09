@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+class NameInfo {
+    var userName: String?
+}

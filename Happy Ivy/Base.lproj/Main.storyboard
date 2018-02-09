@@ -1,24 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AveriaSansLibre-Regular.ttf">
+            <string>AveriaSansLibre-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--HomeView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="HomeView" id="BYZ-38-t0r" customClass="ViewController" customModule="Happy_Ivy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" translatesAutoresizingMaskIntoConstraints="NO" id="r78-2u-OAI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkB-nO-g7q">
+                                <rect key="frame" x="106" y="316" width="162" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="xzh-nv-fn5" kind="presentation" identifier="PlantSeeds" modalTransitionStyle="crossDissolve" id="7Wz-J9-tBe"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r78-2u-OAI" secondAttribute="trailing" id="2u8-5U-wkh"/>
+                            <constraint firstItem="r78-2u-OAI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="2wZ-30-5J5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="r78-2u-OAI" secondAttribute="bottom" id="OM0-eg-YlL"/>
+                            <constraint firstItem="r78-2u-OAI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UM8-71-woS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--NameView-->
+        <scene sceneID="fs6-uM-745">
+            <objects>
+                <viewController title="NameView" id="xzh-nv-fn5" customClass="NameViewController" customModule="Happy_Ivy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vuK-Fw-boB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="QtT-ea-kbV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XYB-W8-ft4">
+                                <rect key="frame" x="105.66666666666669" y="287.66666666666669" width="220" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="uES-01-PWU"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AveriaSansLibre-Regular" family="Averia Sans Libre" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" keyboardType="namePhonePad" keyboardAppearance="light" returnKeyType="done" textContentType="name"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rGg-vW-Uo5" firstAttribute="trailing" secondItem="QtT-ea-kbV" secondAttribute="trailing" id="J1i-yM-1SP"/>
+                            <constraint firstItem="QtT-ea-kbV" firstAttribute="top" secondItem="vuK-Fw-boB" secondAttribute="topMargin" constant="-20" id="ZCZ-92-GyH"/>
+                            <constraint firstItem="rGg-vW-Uo5" firstAttribute="bottom" secondItem="QtT-ea-kbV" secondAttribute="bottom" id="a6p-2T-R72"/>
+                            <constraint firstItem="XYB-W8-ft4" firstAttribute="centerY" secondItem="vuK-Fw-boB" secondAttribute="centerY" constant="-59.5" id="bDB-Ia-cAb"/>
+                            <constraint firstItem="QtT-ea-kbV" firstAttribute="leading" secondItem="rGg-vW-Uo5" secondAttribute="leading" id="jYL-XQ-EO1"/>
+                            <constraint firstItem="XYB-W8-ft4" firstAttribute="centerX" secondItem="vuK-Fw-boB" secondAttribute="centerX" constant="8.5" id="kZS-ao-lZ3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rGg-vW-Uo5"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameBox" destination="XYB-W8-ft4" id="SDV-eh-Fxz"/>
+                        <segue destination="LC8-8J-0m9" kind="presentation" identifier="gotoPlant" id="M26-sK-lku"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U3I-CP-BSS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="798.55072463768124" y="133.69565217391306"/>
+        </scene>
+        <!--PlantVIew-->
+        <scene sceneID="RRd-tL-YvT">
+            <objects>
+                <viewController title="PlantVIew" id="LC8-8J-0m9" customClass="PlantViewController" customModule="Happy_Ivy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uf5-kf-yqe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="jgh-oN-dPa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPn-qU-x4Q">
+                                <rect key="frame" x="173" y="55" width="97" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" red="0.93725490196078431" green="0.68627450980392157" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="AveriaSansLibre-Regular" family="Averia Sans Libre" pointSize="25"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tux-qV-kGn" firstAttribute="trailing" secondItem="jgh-oN-dPa" secondAttribute="trailing" id="57c-Mz-fR6"/>
+                            <constraint firstItem="Tux-qV-kGn" firstAttribute="bottom" secondItem="jgh-oN-dPa" secondAttribute="bottom" id="7af-dH-SUh"/>
+                            <constraint firstItem="jgh-oN-dPa" firstAttribute="top" secondItem="Tux-qV-kGn" secondAttribute="top" constant="-20" id="EVB-gt-a5S"/>
+                            <constraint firstItem="jgh-oN-dPa" firstAttribute="leading" secondItem="Tux-qV-kGn" secondAttribute="leading" id="doR-b4-0PG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Tux-qV-kGn"/>
+                    </view>
+                    <connections>
+                        <outlet property="plantName" destination="YPn-qU-x4Q" id="SFo-Wu-dsL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KqO-CM-vBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1473.913043478261" y="131.25"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="1242" height="2208"/>
+        <image name="2" width="1242" height="2208"/>
+        <image name="3" width="1242" height="2208"/>
+    </resources>
 </document>

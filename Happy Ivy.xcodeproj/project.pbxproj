@@ -12,6 +12,10 @@
 		A01A0C6A202DFC54008383C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01A0C68202DFC54008383C9 /* Main.storyboard */; };
 		A01A0C6C202DFC54008383C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A01A0C6B202DFC54008383C9 /* Assets.xcassets */; };
 		A01A0C6F202DFC54008383C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01A0C6D202DFC54008383C9 /* LaunchScreen.storyboard */; };
+		A01A0C84202E0086008383C9 /* AveriaSansLibre-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A01A0C83202E0086008383C9 /* AveriaSansLibre-Regular.ttf */; };
+		A01A0C86202E077B008383C9 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C85202E077B008383C9 /* NameViewController.swift */; };
+		A01A0C88202E082A008383C9 /* PlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C87202E082A008383C9 /* PlantViewController.swift */; };
+		A01A0C8A202E0C01008383C9 /* NameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C89202E0C01008383C9 /* NameInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		A01A0C6B202DFC54008383C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A01A0C6E202DFC54008383C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A01A0C70202DFC54008383C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A01A0C83202E0086008383C9 /* AveriaSansLibre-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AveriaSansLibre-Regular.ttf"; sourceTree = "<group>"; };
+		A01A0C85202E077B008383C9 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
+		A01A0C87202E082A008383C9 /* PlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantViewController.swift; sourceTree = "<group>"; };
+		A01A0C89202E0C01008383C9 /* NameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +48,7 @@
 			children = (
 				A01A0C63202DFC54008383C9 /* Happy Ivy */,
 				A01A0C62202DFC54008383C9 /* Products */,
+				A01A0C76202DFFEA008383C9 /* fonts */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +65,23 @@
 			children = (
 				A01A0C64202DFC54008383C9 /* AppDelegate.swift */,
 				A01A0C66202DFC54008383C9 /* ViewController.swift */,
+				A01A0C85202E077B008383C9 /* NameViewController.swift */,
+				A01A0C87202E082A008383C9 /* PlantViewController.swift */,
+				A01A0C89202E0C01008383C9 /* NameInfo.swift */,
 				A01A0C68202DFC54008383C9 /* Main.storyboard */,
 				A01A0C6B202DFC54008383C9 /* Assets.xcassets */,
 				A01A0C6D202DFC54008383C9 /* LaunchScreen.storyboard */,
 				A01A0C70202DFC54008383C9 /* Info.plist */,
 			);
 			path = "Happy Ivy";
+			sourceTree = "<group>";
+		};
+		A01A0C76202DFFEA008383C9 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A01A0C83202E0086008383C9 /* AveriaSansLibre-Regular.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A01A0C6F202DFC54008383C9 /* LaunchScreen.storyboard in Resources */,
+				A01A0C84202E0086008383C9 /* AveriaSansLibre-Regular.ttf in Resources */,
 				A01A0C6C202DFC54008383C9 /* Assets.xcassets in Resources */,
 				A01A0C6A202DFC54008383C9 /* Main.storyboard in Resources */,
 			);
@@ -138,6 +159,9 @@
 			files = (
 				A01A0C67202DFC54008383C9 /* ViewController.swift in Sources */,
 				A01A0C65202DFC54008383C9 /* AppDelegate.swift in Sources */,
+				A01A0C88202E082A008383C9 /* PlantViewController.swift in Sources */,
+				A01A0C86202E077B008383C9 /* NameViewController.swift in Sources */,
+				A01A0C8A202E0C01008383C9 /* NameInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
