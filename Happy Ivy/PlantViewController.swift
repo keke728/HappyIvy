@@ -24,8 +24,7 @@ class PlantViewController: UIViewController {
         
         // Derived from: https://www.raywenderlich.com/173972/getting-started-with-core-data-tutorial-2
         // Get User Data store in user
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        let managedContext = appDelegate.persistentContainer.viewContext
+        let managedContext = PersistenceService.context
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "User")
         do { User = try managedContext.fetch(fetchRequest) }
         catch let error as NSError { print("Could not fetch. \(error), \(error.userInfo)") }

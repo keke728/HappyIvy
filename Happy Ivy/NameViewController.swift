@@ -39,10 +39,10 @@ class NameViewController: UIViewController, UITextFieldDelegate {
     func saveName(name: String) {
         
         // Instatiate appDelegate and managedContext
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+        guard let _ = UIApplication.shared.delegate as? AppDelegate else {
             return
         }
-        let managedContext = appDelegate.persistentContainer.viewContext
+        let managedContext = PersistenceService.context
         
         // Declare user object to hold the first User data entry
         var user : NSObject
