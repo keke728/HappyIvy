@@ -17,6 +17,8 @@
 		A01A0C86202E077B008383C9 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C85202E077B008383C9 /* NameViewController.swift */; };
 		A01A0C88202E082A008383C9 /* PlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C87202E082A008383C9 /* PlantViewController.swift */; };
 		A01A0C8A202E0C01008383C9 /* NameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C89202E0C01008383C9 /* NameInfo.swift */; };
+		A0353486202EC50900F7A946 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0353485202EC50900F7A946 /* Plant.swift */; };
+		A0353488202EC54100F7A946 /* PlantHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0353487202EC54100F7A946 /* PlantHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		A01A0C85202E077B008383C9 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		A01A0C87202E082A008383C9 /* PlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantViewController.swift; sourceTree = "<group>"; };
 		A01A0C89202E0C01008383C9 /* NameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInfo.swift; sourceTree = "<group>"; };
+		A0353485202EC50900F7A946 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		A0353487202EC54100F7A946 /* PlantHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				A01A0C6B202DFC54008383C9 /* Assets.xcassets */,
 				A01A0C6D202DFC54008383C9 /* LaunchScreen.storyboard */,
 				A01A0C70202DFC54008383C9 /* Info.plist */,
+				A0353485202EC50900F7A946 /* Plant.swift */,
+				A0353487202EC54100F7A946 /* PlantHandler.swift */,
 			);
 			path = "Happy Ivy";
 			sourceTree = "<group>";
@@ -162,8 +168,10 @@
 			files = (
 				A01A0C67202DFC54008383C9 /* HomeViewController.swift in Sources */,
 				A01A0C65202DFC54008383C9 /* AppDelegate.swift in Sources */,
+				A0353488202EC54100F7A946 /* PlantHandler.swift in Sources */,
 				A01A0C88202E082A008383C9 /* PlantViewController.swift in Sources */,
 				A01A0C86202E077B008383C9 /* NameViewController.swift in Sources */,
+				A0353486202EC50900F7A946 /* Plant.swift in Sources */,
 				A01A0C8A202E0C01008383C9 /* NameInfo.swift in Sources */,
 				71864581202EAF570098921F /* Model.xcdatamodeld in Sources */,
 			);
