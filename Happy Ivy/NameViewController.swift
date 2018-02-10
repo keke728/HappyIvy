@@ -14,7 +14,7 @@ class NameViewController: UIViewController, UITextFieldDelegate {
     
      var user = NameInfo()
      var name:String?
-     
+
     
     override func viewDidLoad() {
         nameBox.delegate = self
