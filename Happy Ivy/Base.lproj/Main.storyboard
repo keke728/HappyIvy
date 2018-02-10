@@ -19,7 +19,7 @@
         <!--HomeView-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="HomeView" id="BYZ-38-t0r" customClass="ViewController" customModule="Happy_Ivy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeView" title="HomeView" id="BYZ-38-t0r" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,7 +52,7 @@
         <!--NameView-->
         <scene sceneID="fs6-uM-745">
             <objects>
-                <viewController title="NameView" id="xzh-nv-fn5" customClass="NameViewController" customModule="Happy_Ivy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NameView" title="NameView" id="xzh-nv-fn5" customClass="NameViewController" customModule="Happy_Ivy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vuK-Fw-boB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,7 +93,7 @@
         <!--PlantVIew-->
         <scene sceneID="RRd-tL-YvT">
             <objects>
-                <viewController title="PlantVIew" id="LC8-8J-0m9" customClass="PlantViewController" customModule="Happy_Ivy" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlantView" title="PlantVIew" id="LC8-8J-0m9" customClass="PlantViewController" customModule="Happy_Ivy" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uf5-kf-yqe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KqO-CM-vBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1473.913043478261" y="131.25"/>
+            <point key="canvasLocation" x="1645" y="132"/>
         </scene>
     </scenes>
     <resources>
