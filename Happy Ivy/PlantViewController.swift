@@ -15,7 +15,7 @@ class PlantViewController: UIViewController {
     @IBOutlet weak var plantName: UITextField!
     
     // User Managed Object
-    var User: [NSManagedObject] = []
+    var Plants: [Plant_entity] = []
     
     override func viewDidLoad() {
         
@@ -24,15 +24,13 @@ class PlantViewController: UIViewController {
         
         // Derived from: https://www.raywenderlich.com/173972/getting-started-with-core-data-tutorial-2
         // Get User Data store in user
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "User")
-        do { User = try managedContext.fetch(fetchRequest) }
+        let managedContext = PersistenceService.context
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Plant_entity")
+        do { Plants = try managedContext.fetch(fetchRequest) as! [Plant_entity] }
         catch let error as NSError { print("Could not fetch. \(error), \(error.userInfo)") }
-        let user : NSObject = User[0]
+        let plant : Plant_entity = Plants[0]
         
-        plantName.text = user.value(forKey: "name") as? String // add user's name
-        //plantName.text = user.userName
+        plantName.text = plant.name // add user's name
         
         super.viewDidLoad()
         

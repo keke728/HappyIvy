@@ -36,23 +36,20 @@ class NameViewController: UIViewController, UITextFieldDelegate {
      - Parameters:
      - name: the user name to be saved
      */
-    func saveName(name: String) {
+    func savePlant(name: String) {
         
-        // Instatiate appDelegate and managedContext
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
-            return
-        }
-        let managedContext = appDelegate.persistentContainer.viewContext
+        // Get Context
+        let managedContext = PersistenceService.context
         
         // Declare user object to hold the first User data entry
-        var user : NSObject
+        var plant : NSObject
         
         // Initialize an entry in data model.
-        let entity = NSEntityDescription.entity(forEntityName: "User", in: managedContext)!
-        user = NSManagedObject(entity: entity, insertInto: managedContext)
+        let entity = NSEntityDescription.entity(forEntityName: "Plant_entity", in: managedContext)!
+        plant = NSManagedObject(entity: entity, insertInto: managedContext)
         
         // Set entry value for name
-        user.setValue(name, forKeyPath: "name")
+        plant.setValue(name, forKeyPath: "name")
         
         // Perform built in save function
         do {
@@ -69,7 +66,7 @@ extension NameViewController {
     
     func textFieldShouldReturn(_ nameBox: UITextField) -> Bool {
         // called when 'return' key pressed. return NO to ignore.
-        saveName(name: nameBox.text!)
+        savePlant(name: nameBox.text!)
         performSegue(withIdentifier: "gotoPlant", sender: NameViewController.self)
         return true
     }

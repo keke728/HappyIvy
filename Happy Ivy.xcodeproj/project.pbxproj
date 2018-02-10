@@ -17,7 +17,9 @@
 		A01A0C86202E077B008383C9 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C85202E077B008383C9 /* NameViewController.swift */; };
 		A01A0C88202E082A008383C9 /* PlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C87202E082A008383C9 /* PlantViewController.swift */; };
 		A01A0C8A202E0C01008383C9 /* NameInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C89202E0C01008383C9 /* NameInfo.swift */; };
-		A0353486202EC50900F7A946 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0353485202EC50900F7A946 /* Plant.swift */; };
+		A0353497202FAC0B00F7A946 /* Plant_entity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0353495202FAC0B00F7A946 /* Plant_entity+CoreDataClass.swift */; };
+		A0353498202FAC0B00F7A946 /* Plant_entity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0353496202FAC0B00F7A946 /* Plant_entity+CoreDataProperties.swift */; };
+		A035349A202FAC9200F7A946 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0353499202FAC9200F7A946 /* PersistenceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +35,9 @@
 		A01A0C85202E077B008383C9 /* NameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 		A01A0C87202E082A008383C9 /* PlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantViewController.swift; sourceTree = "<group>"; };
 		A01A0C89202E0C01008383C9 /* NameInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameInfo.swift; sourceTree = "<group>"; };
-		A0353485202EC50900F7A946 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		A0353495202FAC0B00F7A946 /* Plant_entity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant_entity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A0353496202FAC0B00F7A946 /* Plant_entity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plant_entity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A0353499202FAC9200F7A946 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 		A01A0C63202DFC54008383C9 /* Happy Ivy */ = {
 			isa = PBXGroup;
 			children = (
+				A0353495202FAC0B00F7A946 /* Plant_entity+CoreDataClass.swift */,
+				A0353496202FAC0B00F7A946 /* Plant_entity+CoreDataProperties.swift */,
 				A01A0C64202DFC54008383C9 /* AppDelegate.swift */,
 				7186457F202EAF570098921F /* Model.xcdatamodeld */,
 				A01A0C66202DFC54008383C9 /* HomeViewController.swift */,
@@ -77,7 +83,7 @@
 				A01A0C6B202DFC54008383C9 /* Assets.xcassets */,
 				A01A0C6D202DFC54008383C9 /* LaunchScreen.storyboard */,
 				A01A0C70202DFC54008383C9 /* Info.plist */,
-				A0353485202EC50900F7A946 /* Plant.swift */,
+				A0353499202FAC9200F7A946 /* PersistenceService.swift */,
 			);
 			path = "Happy Ivy";
 			sourceTree = "<group>";
@@ -164,10 +170,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A01A0C67202DFC54008383C9 /* HomeViewController.swift in Sources */,
+				A0353498202FAC0B00F7A946 /* Plant_entity+CoreDataProperties.swift in Sources */,
 				A01A0C65202DFC54008383C9 /* AppDelegate.swift in Sources */,
 				A01A0C88202E082A008383C9 /* PlantViewController.swift in Sources */,
 				A01A0C86202E077B008383C9 /* NameViewController.swift in Sources */,
-				A0353486202EC50900F7A946 /* Plant.swift in Sources */,
+				A035349A202FAC9200F7A946 /* PersistenceService.swift in Sources */,
+				A0353497202FAC0B00F7A946 /* Plant_entity+CoreDataClass.swift in Sources */,
 				A01A0C8A202E0C01008383C9 /* NameInfo.swift in Sources */,
 				71864581202EAF570098921F /* Model.xcdatamodeld in Sources */,
 			);
