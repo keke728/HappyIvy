@@ -34,30 +34,22 @@ class Plant {
     }
     
     // MARK: Public Methods
-    func increaseAir() {
-        air += 5
-    }
-    func decreaseAir() {
-        air -= 5
-    }
-    func increaseWater() {
-        water += 5
-    }
-    func decreaseWater() {
-        water -= 5
-    }
-    func increaseSun() {
-        sun += 5
-    }
-    func decreaseSun() {
-        sun -= 5
-    }
-    func increaseLove() {
-        love += 5
-    }
-    func decreaseLove() {
-        love -= 5
-    }
+    
+    // MARK: inc / dec
+    func increaseAir() { air += 5 }
+    func decreaseAir() { air -= 5 }
+    func increaseWater() { water += 5 }
+    func decreaseWater() { water -= 5 }
+    func increaseSun() { sun += 5 }
+    func decreaseSun() { sun -= 5 }
+    func increaseLove() { love += 5 }
+    func decreaseLove() { love -= 5 }
+    
+    // MARK: getters
+    func getAir() -> Int { return air }
+    func getWater() -> Int { return water }
+    func getSun() -> Int { return sun }
+    func getLove() -> Int { return love }
     
     
 }
