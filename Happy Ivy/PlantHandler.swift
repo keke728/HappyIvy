@@ -8,10 +8,10 @@
 
 import Foundation
 
-class plantHandler {
+class PlantHandler {
     
     // Public Data
-    static let shared = plantHandler()
+    static let shared = PlantHandler()
     var plantList: [Plant]
     
     // Private Data
