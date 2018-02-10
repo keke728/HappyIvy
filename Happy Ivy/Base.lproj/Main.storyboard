@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uI6-au-cvC">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -126,10 +126,146 @@
             </objects>
             <point key="canvasLocation" x="1645" y="132"/>
         </scene>
+        <!--STATUS-->
+        <scene sceneID="PIm-20-agW">
+            <objects>
+                <viewController title="STATUS" id="3iH-9U-cob" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jbd-YM-Cxg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Status_bg " translatesAutoresizingMaskIntoConstraints="NO" id="X14-eA-3yz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X14-eA-3yz" firstAttribute="leading" secondItem="2UG-K9-q5K" secondAttribute="leading" id="D3O-OR-7UZ"/>
+                            <constraint firstItem="2UG-K9-q5K" firstAttribute="bottom" secondItem="X14-eA-3yz" secondAttribute="bottom" id="LFo-kp-m1J"/>
+                            <constraint firstItem="2UG-K9-q5K" firstAttribute="trailing" secondItem="X14-eA-3yz" secondAttribute="trailing" id="V9b-7G-dYM"/>
+                            <constraint firstItem="X14-eA-3yz" firstAttribute="top" secondItem="2UG-K9-q5K" secondAttribute="top" constant="-20" id="igD-xd-rgq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2UG-K9-q5K"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="statusicon" id="Yrl-oR-VMc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DXg-kq-6m9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4182.608695652174" y="1017.3913043478261"/>
+        </scene>
+        <!--TO-DO-->
+        <scene sceneID="0HM-Yd-bFF">
+            <objects>
+                <viewController title="TO-DO" id="Ouw-nr-hle" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cz3-pm-DBx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="To do_bg" translatesAutoresizingMaskIntoConstraints="NO" id="nGa-lq-WEV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WrO-ed-10R" firstAttribute="trailing" secondItem="nGa-lq-WEV" secondAttribute="trailing" id="FdU-E5-cln"/>
+                            <constraint firstItem="WrO-ed-10R" firstAttribute="bottom" secondItem="nGa-lq-WEV" secondAttribute="bottom" id="Grs-xH-KBd"/>
+                            <constraint firstItem="nGa-lq-WEV" firstAttribute="leading" secondItem="WrO-ed-10R" secondAttribute="leading" id="ZLL-78-7Cl"/>
+                            <constraint firstItem="nGa-lq-WEV" firstAttribute="top" secondItem="WrO-ed-10R" secondAttribute="top" constant="-20" id="tDY-7T-Q5I"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WrO-ed-10R"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="todoicon" id="CLk-AW-lUm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6LG-L5-mhs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3376.811594202899" y="1676.9021739130435"/>
+        </scene>
+        <!--SHELVES-->
+        <scene sceneID="pym-jg-7Kw">
+            <objects>
+                <viewController title="SHELVES" id="0wB-SY-5Ar" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YgE-Ae-5h0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Shelves_bg" translatesAutoresizingMaskIntoConstraints="NO" id="ufJ-fp-djg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8E3-Aw-xcX" firstAttribute="trailing" secondItem="ufJ-fp-djg" secondAttribute="trailing" id="8h0-Cm-35E"/>
+                            <constraint firstItem="8E3-Aw-xcX" firstAttribute="bottom" secondItem="ufJ-fp-djg" secondAttribute="bottom" id="abM-yJ-f5N"/>
+                            <constraint firstItem="ufJ-fp-djg" firstAttribute="leading" secondItem="8E3-Aw-xcX" secondAttribute="leading" id="f1b-gx-4mI"/>
+                            <constraint firstItem="ufJ-fp-djg" firstAttribute="top" secondItem="8E3-Aw-xcX" secondAttribute="top" constant="-20" id="zFF-d0-ssF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8E3-Aw-xcX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="shelficon" id="bCW-te-9EN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4qI-1w-4gM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4182.608695652174" y="1676.9021739130435"/>
+        </scene>
+        <!--GOALS-->
+        <scene sceneID="TMb-Y2-qYi">
+            <objects>
+                <viewController title="GOALS" id="uI6-au-cvC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="52r-Hk-ESB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Goals_bg" translatesAutoresizingMaskIntoConstraints="NO" id="HdQ-sc-42W">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6eS-JH-zHF" firstAttribute="bottom" secondItem="HdQ-sc-42W" secondAttribute="bottom" id="9tU-Vq-OpO"/>
+                            <constraint firstItem="HdQ-sc-42W" firstAttribute="top" secondItem="6eS-JH-zHF" secondAttribute="top" constant="-20" id="Dd3-EQ-QBH"/>
+                            <constraint firstItem="6eS-JH-zHF" firstAttribute="trailing" secondItem="HdQ-sc-42W" secondAttribute="trailing" id="QHP-Tm-emb"/>
+                            <constraint firstItem="HdQ-sc-42W" firstAttribute="leading" secondItem="6eS-JH-zHF" secondAttribute="leading" id="rrh-U9-t1c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6eS-JH-zHF"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="goalicon" id="iZd-pS-hS5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="88g-zt-g2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3376.811594202899" y="1018.2065217391305"/>
+        </scene>
+        <!--Tab_Bars-->
+        <scene sceneID="pYu-be-Oaq">
+            <objects>
+                <tabBarController title="Tab_Bars" id="WP5-HM-L3b" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="oNI-0n-gUj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="uI6-au-cvC" kind="relationship" relationship="viewControllers" id="Qxl-fZ-aGo"/>
+                        <segue destination="Ouw-nr-hle" kind="relationship" relationship="viewControllers" id="RJp-oB-rXs"/>
+                        <segue destination="3iH-9U-cob" kind="relationship" relationship="viewControllers" id="bRQ-Iq-3lD"/>
+                        <segue destination="0wB-SY-5Ar" kind="relationship" relationship="viewControllers" id="ZmB-6K-MTS"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GP1-tS-fbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2459" y="1344"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1" width="1242" height="2208"/>
         <image name="2" width="1242" height="2208"/>
         <image name="3" width="1242" height="2208"/>
+        <image name="Goals_bg" width="1242" height="2208"/>
+        <image name="Shelves_bg" width="1242" height="2208"/>
+        <image name="Status_bg " width="1242" height="2208"/>
+        <image name="To do_bg" width="1242" height="2208"/>
+        <image name="goalicon" width="30" height="36"/>
+        <image name="shelficon" width="30" height="23"/>
+        <image name="statusicon" width="30" height="25"/>
+        <image name="todoicon" width="30" height="29"/>
     </resources>
 </document>
