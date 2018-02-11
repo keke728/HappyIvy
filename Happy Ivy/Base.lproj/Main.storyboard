@@ -125,7 +125,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KqO-CM-vBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4887" y="955"/>
+            <point key="canvasLocation" x="4051" y="2132"/>
         </scene>
         <!--TO-DO-->
         <scene sceneID="0HM-Yd-bFF">
@@ -152,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6LG-L5-mhs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3376.811594202899" y="1676.9021739130435"/>
+            <point key="canvasLocation" x="2458" y="2132"/>
         </scene>
         <!--SHELVES-->
         <scene sceneID="pym-jg-7Kw">
@@ -179,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4qI-1w-4gM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4182.608695652174" y="1676.9021739130435"/>
+            <point key="canvasLocation" x="3249" y="2131"/>
         </scene>
         <!--GOALS-->
         <scene sceneID="TMb-Y2-qYi">
@@ -192,6 +192,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Goals_bg" translatesAutoresizingMaskIntoConstraints="NO" id="HdQ-sc-42W">
                                 <rect key="frame" x="0.0" y="44" width="414" height="643"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5V-CM-ify">
+                                <rect key="frame" x="184" y="162" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="ERz-ty-PhR" kind="show" id="UW0-qF-tMh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -206,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="88g-zt-g2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4136" y="955"/>
+            <point key="canvasLocation" x="4025" y="845"/>
         </scene>
         <!--Tab_Bars-->
         <scene sceneID="pYu-be-Oaq">
@@ -251,7 +259,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <imageView key="backgroundView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="newActivityBackground" id="QG4-EC-38U">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="443"/>
+                                    <rect key="frame" x="0.0" y="-8" width="414" height="443"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                                 <cells>
@@ -305,7 +313,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFL-9K-iuG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3376.811594202899" y="254.34782608695653"/>
+            <point key="canvasLocation" x="4314" y="-180"/>
         </scene>
         <!--SetActivity-->
         <scene sceneID="8de-fJ-3Oz">
@@ -374,7 +382,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H0X-cn-cDJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3377" y="-474"/>
+            <point key="canvasLocation" x="5094" y="-180"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AF5-iP-3Gi">
@@ -393,7 +401,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mxn-bQ-zIY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3376.811594202899" y="954.61956521739137"/>
+            <point key="canvasLocation" x="3270" y="846"/>
         </scene>
     </scenes>
     <resources>
