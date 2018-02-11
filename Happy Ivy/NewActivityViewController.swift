@@ -13,12 +13,14 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource, U
     // MARK: - Outlets
     
     @IBOutlet var collectionView: UICollectionView!
+    var selectedActivity : String!
     
     // MARK: - Actions
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         collectionView.dataSource  = self
         
         let cellWidth : CGFloat = collectionView.frame.size.width / 8.0
@@ -111,16 +113,17 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource, U
         case 0:
             let image: UIImage = activities.PersonalCareAndHealthImages[indexPath.row]!
             cell.name = activities.PersonalCareAndHealthNames[indexPath.row]
+            //selectedActivity = activities.LifeAndHabitsNames[indexPath.row]
             cell.activityButton.setImage(image, for: UIControlState.normal)
         case 1:
             let image: UIImage = activities.LifeAndHabitsImages[indexPath.row]!
             //cell.activityButton.imageView.image = image
             cell.name = activities.LifeAndHabitsNames[indexPath.row]
+            //selectedActivity = activities.LifeAndHabitsNames[indexPath.row]
             cell.activityButton.setImage(image, for: UIControlState.normal)
         default:
             print("no section found")
         }
-
         
         return cell
     }
@@ -152,6 +155,18 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 1
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let cell = sender as? NewActivityViewCell
+        if(segue.identifier == "goToSetActivity"){
+            let destinationVC:SetActivityViewController = segue.destination as! SetActivityViewController
+            destinationVC.activitySelected = cell?.name
+            
+        }
+    }
+    
+
 
 }
 

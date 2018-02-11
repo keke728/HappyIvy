@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SetActivityViewController: UIViewController, UITableViewDataSource  {
 
@@ -16,15 +17,31 @@ class SetActivityViewController: UIViewController, UITableViewDataSource  {
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var activitySelected : [Int]!
+    var activitySelected : String!
+    
+    // User Managed Object
+    var Activity: [NSManagedObject] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Hide tableView for now
+        tableView.isHidden = true
+        
         // Derived from http://www.thomashanning.com/uitableview-tutorial-for-beginners/
         tableView.dataSource  = self
         
-
+        
+        let managedContext = PersistenceService.context
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Activity")
+        do { Activity = try managedContext.fetch(fetchRequest) as! [Activity] }
+        catch let error as NSError { print("Could not fetch. \(error), \(error.userInfo)") }
+        let activity : Activity = Activity.last! as! Activity
+        
+        activityLabel.text = activity.name // add user's name
+        
+        activityImage.image = UIImage(named: activity.name!)
+        
         // Do any additional setup after loading the view.
     }
 
