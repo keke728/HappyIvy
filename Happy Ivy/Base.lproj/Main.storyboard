@@ -98,11 +98,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="3" translatesAutoresizingMaskIntoConstraints="NO" id="jgh-oN-dPa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Status_bg " translatesAutoresizingMaskIntoConstraints="NO" id="jgh-oN-dPa">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YPn-qU-x4Q">
-                                <rect key="frame" x="173" y="55" width="97" height="38"/>
+                                <rect key="frame" x="173" y="141" width="97" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" red="0.93725490196078431" green="0.68627450980392157" blue="0.53725490196078429" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="AveriaSansLibre-Regular" family="Averia Sans Libre" pointSize="25"/>
@@ -232,9 +232,9 @@
     <resources>
         <image name="1" width="1242" height="2208"/>
         <image name="2" width="1242" height="2208"/>
-        <image name="3" width="1242" height="2208"/>
         <image name="Goals_bg" width="1242" height="2208"/>
         <image name="Shelves_bg" width="1242" height="2208"/>
+        <image name="Status_bg " width="1242" height="2208"/>
         <image name="To do_bg" width="1242" height="2208"/>
         <image name="goalicon" width="30" height="36"/>
         <image name="shelficon" width="30" height="23"/>
