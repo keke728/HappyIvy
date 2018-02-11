@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetActivityViewController: UIViewController {
+class SetActivityViewController: UIViewController, UITableViewDataSource  {
 
     // MARK: - Outlets
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -19,25 +19,32 @@ class SetActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Derived from http://www.thomashanning.com/uitableview-tutorial-for-beginners/
+        tableView.dataSource  = self
         
 
         // Do any additional setup after loading the view.
     }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")!
+        let text = "Repeat?"
+        cell.textLabel?.text = text
+        return cell
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
