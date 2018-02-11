@@ -12,7 +12,7 @@ import CoreData
 class NewActivityViewCell: UICollectionViewCell {
      // Derived from https://www.raywenderlich.com/136159/uicollectionview-tutorial-getting-started
     
-    var name : String!
+    var selectedActivityName : String!
     
     // User Managed Object
     var Activity: [NSManagedObject] = []
@@ -25,7 +25,7 @@ class NewActivityViewCell: UICollectionViewCell {
     
     @IBAction func activityButtonAction(_ sender: Any) {
         
-        print(name)
+        print(selectedActivityName)
         
         /*
         let managedContext = PersistenceService.context
@@ -46,7 +46,7 @@ class NewActivityViewCell: UICollectionViewCell {
         */
         
         let selectedActivity = SelectedActivitySingleton.sharedInstance
-        selectedActivity.name = name
+        selectedActivity.name = selectedActivityName
         
         // Set entry value for name
         //activity.setValue(name, forKeyPath: "name")

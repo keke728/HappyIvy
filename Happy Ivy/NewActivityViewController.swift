@@ -20,8 +20,10 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         collectionView.dataSource  = self
+        
+        // Hide tab bar
+        self.tabBarController?.tabBar.isHidden = true
         
         let cellWidth : CGFloat = collectionView.frame.size.width / 8.0
         //let cellheight : CGFloat = collectionView.frame.size.height - 2.0
@@ -102,13 +104,13 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource, U
         switch indexPath.section{
         case 0:
             let image: UIImage = activities.PersonalCareAndHealthImages[indexPath.row]!
-            cell.name = activities.PersonalCareAndHealthNames[indexPath.row]
+            cell.selectedActivityName = activities.PersonalCareAndHealthNames[indexPath.row]
             //selectedActivity = activities.LifeAndHabitsNames[indexPath.row]
             cell.activityButton.setImage(image, for: UIControlState.normal)
         case 1:
             let image: UIImage = activities.LifeAndHabitsImages[indexPath.row]!
             //cell.activityButton.imageView.image = image
-            cell.name = activities.LifeAndHabitsNames[indexPath.row]
+            cell.selectedActivityName = activities.LifeAndHabitsNames[indexPath.row]
             //selectedActivity = activities.LifeAndHabitsNames[indexPath.row]
             cell.activityButton.setImage(image, for: UIControlState.normal)
         default:

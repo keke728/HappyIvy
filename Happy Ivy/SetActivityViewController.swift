@@ -14,8 +14,9 @@ class SetActivityViewController: UIViewController, UITableViewDataSource  {
     // MARK: - Outlets
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var activityImage: UIImageView!
-    @IBOutlet weak var activityLabel: UILabel!
+    @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var saveButton: UIButton!
     
     // User Managed Object
     var Activity: [NSManagedObject] = []
@@ -32,6 +33,13 @@ class SetActivityViewController: UIViewController, UITableViewDataSource  {
         // Get Singleton
         let selectedActivity = SelectedActivitySingleton.sharedInstance
         
+        // Edit button appearance
+        saveButton.layer.cornerRadius = 10
+        saveButton.clipsToBounds = true
+        //saveButton.contentEdgeInsets = UIEdgeInsetsMake(30, 100, 30, 30)
+        
+        // Hide tab bar
+        self.tabBarController?.tabBar.isHidden = true
         /*
         let managedContext = PersistenceService.context
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Activity")
@@ -40,7 +48,7 @@ class SetActivityViewController: UIViewController, UITableViewDataSource  {
         let activity : NSObject = Activity[0]//Activity.last! as! Activity
          */
         
-        activityLabel.text = selectedActivity.name
+        //activityLabel.text = selectedActivity.name
         
         activityImage.image = UIImage(named: selectedActivity.name!)
 

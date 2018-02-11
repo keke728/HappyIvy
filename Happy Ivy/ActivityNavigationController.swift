@@ -14,6 +14,11 @@ class ActivityNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Change navigation bar font
+        //UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "AveriaSansLibre-Regular", size: 14.0)!], for: .normal)
+        
+        
 
         // Do any additional setup after loading the view.
     }
