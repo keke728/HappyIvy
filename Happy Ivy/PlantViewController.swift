@@ -22,6 +22,7 @@ class PlantViewController: UIViewController {
         //* TODO: put the user variable and all these lines of code into a global class (as well as User Managed Object)
         //      See https://stackoverflow.com/questions/24333142/access-variable-in-different-class-swift
         
+        // Derived from: https://www.raywenderlich.com/173972/getting-started-with-core-data-tutorial-2
         // Get User Data store in user
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
         let managedContext = appDelegate.persistentContainer.viewContext

@@ -32,7 +32,7 @@ class NameViewController: UIViewController, UITextFieldDelegate {
     
     /**
      Saves input string as user name to User entity in Model data model
-     
+     Derived from: https://www.raywenderlich.com/173972/getting-started-with-core-data-tutorial-2
      - Parameters:
      - name: the user name to be saved
      */
