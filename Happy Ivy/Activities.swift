@@ -43,7 +43,7 @@ class Activities{
         PersonalCareAndHealthImages = [0: lipstick, 1: dress]
         PersonalCareAndHealthNames = [0: "lipstick", 1: "dress"]
         LifeAndHabitsImages = [0: broom, 1: moon]
-        LifeAndHabitsNames = [0: "lipstick", 1: "moon"]
+        LifeAndHabitsNames = [0: "broom", 1: "moon"]
         
         //categories = ["personalCareAndHealth": personalCareAndHealthImages, "LifeAndHabits": LifeAndHabitsImages]
         

@@ -110,12 +110,12 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource, U
         switch indexPath.section{
         case 0:
             let image: UIImage = activities.PersonalCareAndHealthImages[indexPath.row]!
-            //cell.name = activities.PersonalCareAndHealthNames[indexPath.row]
+            cell.name = activities.PersonalCareAndHealthNames[indexPath.row]
             cell.activityButton.setImage(image, for: UIControlState.normal)
         case 1:
             let image: UIImage = activities.LifeAndHabitsImages[indexPath.row]!
             //cell.activityButton.imageView.image = image
-            //cell.name = activities.LifeAndHabitsNames[indexPath.row]
+            cell.name = activities.LifeAndHabitsNames[indexPath.row]
             cell.activityButton.setImage(image, for: UIControlState.normal)
         default:
             print("no section found")
