@@ -16,10 +16,13 @@ class SetActivityViewController: UIViewController, UITableViewDataSource  {
     @IBOutlet weak var activityImage: UIImageView!
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var saveButton: UIButton!
+    //@IBOutlet weak var saveButton: UIButton!
     
     // User Managed Object
     var Activity: [NSManagedObject] = []
+    
+    // Save button
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +36,18 @@ class SetActivityViewController: UIViewController, UITableViewDataSource  {
         // Get Singleton
         let selectedActivity = SelectedActivitySingleton.sharedInstance
         
+        let saveButton : UIBarButtonItem = UIBarButtonItem(title: "Save", style: UIBarButtonItemStyle.done, target: navigationItem.rightBarButtonItem, action: nil)
+        // Add Save Button
+        //saveButton.title = "Save"
+
+        navigationItem.setRightBarButton(saveButton, animated: false)
+        
+        // Edit textField appearance
+        //textField.setFr = 25
+        
         // Edit button appearance
-        saveButton.layer.cornerRadius = 10
-        saveButton.clipsToBounds = true
+        //saveButton.layer.cornerRadius = 10
+        //saveButton.clipsToBounds = true
         //saveButton.contentEdgeInsets = UIEdgeInsetsMake(30, 100, 30, 30)
         
         // Hide tab bar
