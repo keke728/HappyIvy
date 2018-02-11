@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		71864581202EAF570098921F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7186457F202EAF570098921F /* Model.xcdatamodeld */; };
+		71BC38EA202FE07300FC1B07 /* setActivity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71BC38E9202FE07300FC1B07 /* setActivity.storyboard */; };
 		A01A0C65202DFC54008383C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C64202DFC54008383C9 /* AppDelegate.swift */; };
 		A01A0C67202DFC54008383C9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C66202DFC54008383C9 /* HomeViewController.swift */; };
 		A01A0C6A202DFC54008383C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01A0C68202DFC54008383C9 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		71864580202EAF570098921F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		71BC38E9202FE07300FC1B07 /* setActivity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = setActivity.storyboard; sourceTree = "<group>"; };
 		A01A0C61202DFC54008383C9 /* Happy Ivy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy Ivy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01A0C64202DFC54008383C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A01A0C66202DFC54008383C9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 		A01A0C63202DFC54008383C9 /* Happy Ivy */ = {
 			isa = PBXGroup;
 			children = (
+				71BC38E9202FE07300FC1B07 /* setActivity.storyboard */,
 				A0353495202FAC0B00F7A946 /* Plant_entity+CoreDataClass.swift */,
 				A0353496202FAC0B00F7A946 /* Plant_entity+CoreDataProperties.swift */,
 				A01A0C64202DFC54008383C9 /* AppDelegate.swift */,
@@ -155,6 +158,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71BC38EA202FE07300FC1B07 /* setActivity.storyboard in Resources */,
 				A01A0C6F202DFC54008383C9 /* LaunchScreen.storyboard in Resources */,
 				A01A0C84202E0086008383C9 /* AveriaSansLibre-Regular.ttf in Resources */,
 				A01A0C6C202DFC54008383C9 /* Assets.xcassets in Resources */,
