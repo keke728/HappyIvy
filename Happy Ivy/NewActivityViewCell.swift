@@ -15,7 +15,7 @@ class NewActivityViewCell: UICollectionViewCell {
     var name : String!
     
     // User Managed Object
-    var Activity: [Activity] = []
+    var Activity: [NSManagedObject] = []
     
     
     
@@ -24,20 +24,34 @@ class NewActivityViewCell: UICollectionViewCell {
     @IBOutlet weak var activityButton: UIButton!
     
     @IBAction func activityButtonAction(_ sender: Any) {
+        
         print(name)
         
+        /*
         let managedContext = PersistenceService.context
         
         // Declare activity object to hold the first User data entry
-        var activity : NSObject
+        let activity : NSObject
         
         // Initialize an entry in data model.
         let entity = NSEntityDescription.entity(forEntityName: "Activity", in: managedContext)!
         activity = NSManagedObject(entity: entity, insertInto: managedContext)
         
-        // Set entry value for name
-        activity.setValue(name, forKeyPath: "name")
+        /*
+        let objectID = NSManagedObjectID()
         
+        if objectID.isTemporaryID{
+            
+        }*/
+        */
+        
+        let selectedActivity = SelectedActivitySingleton.sharedInstance
+        selectedActivity.name = name
+        
+        // Set entry value for name
+        //activity.setValue(name, forKeyPath: "name")
+        //activity
+        print("here")
     }
     
     

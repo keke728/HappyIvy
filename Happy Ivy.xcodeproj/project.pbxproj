@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7146B4AD203053BD00F65164 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7146B4AC203053BD00F65164 /* Charts.framework */; };
+		7146B4AE203053C500F65164 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7146B4AC203053BD00F65164 /* Charts.framework */; };
+		7146B4AF203053C500F65164 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7146B4AC203053BD00F65164 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		7146B4B32030630500F65164 /* ActivityNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7146B4B22030630500F65164 /* ActivityNavigationController.swift */; };
+		7146B4B52030690200F65164 /* SelectedActivitySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7146B4B42030690200F65164 /* SelectedActivitySingleton.swift */; };
 		71864581202EAF570098921F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7186457F202EAF570098921F /* Model.xcdatamodeld */; };
 		71BC38F0202FE4D500FC1B07 /* NewActivityViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC38ED202FE4D500FC1B07 /* NewActivityViewCell.swift */; };
-		71BC38F1202FE4D500FC1B07 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC38EE202FE4D500FC1B07 /* Activity.swift */; };
 		71BC38F2202FE4D500FC1B07 /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC38EF202FE4D500FC1B07 /* NewActivityViewController.swift */; };
 		71BC38F4202FE4E400FC1B07 /* SetActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC38F3202FE4E400FC1B07 /* SetActivityViewController.swift */; };
 		71BC38F6202FEDF800FC1B07 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC38F5202FEDF800FC1B07 /* Activities.swift */; };
-		71BC38F820301F2B00FC1B07 /* NewActivityViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC38F720301F2B00FC1B07 /* NewActivityViewHeader.swift */; };
 		A01A0C65202DFC54008383C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C64202DFC54008383C9 /* AppDelegate.swift */; };
 		A01A0C67202DFC54008383C9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C66202DFC54008383C9 /* HomeViewController.swift */; };
 		A01A0C6A202DFC54008383C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01A0C68202DFC54008383C9 /* Main.storyboard */; };
@@ -28,14 +31,29 @@
 		A035349A202FAC9200F7A946 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0353499202FAC9200F7A946 /* PersistenceService.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7146B4B0203053C500F65164 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7146B4AF203053C500F65164 /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7146B4AC203053BD00F65164 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
+		7146B4B22030630500F65164 /* ActivityNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityNavigationController.swift; sourceTree = "<group>"; };
+		7146B4B42030690200F65164 /* SelectedActivitySingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedActivitySingleton.swift; sourceTree = "<group>"; };
 		71864580202EAF570098921F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		71BC38ED202FE4D500FC1B07 /* NewActivityViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewActivityViewCell.swift; sourceTree = "<group>"; };
-		71BC38EE202FE4D500FC1B07 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		71BC38EF202FE4D500FC1B07 /* NewActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
 		71BC38F3202FE4E400FC1B07 /* SetActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetActivityViewController.swift; sourceTree = "<group>"; };
 		71BC38F5202FEDF800FC1B07 /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
-		71BC38F720301F2B00FC1B07 /* NewActivityViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityViewHeader.swift; sourceTree = "<group>"; };
 		A01A0C61202DFC54008383C9 /* Happy Ivy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy Ivy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01A0C64202DFC54008383C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A01A0C66202DFC54008383C9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7146B4AD203053BD00F65164 /* Charts.framework in Frameworks */,
+				7146B4AE203053C500F65164 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +86,7 @@
 		A01A0C58202DFC54008383C9 = {
 			isa = PBXGroup;
 			children = (
+				7146B4AC203053BD00F65164 /* Charts.framework */,
 				A01A0C63202DFC54008383C9 /* Happy Ivy */,
 				A01A0C62202DFC54008383C9 /* Products */,
 				A01A0C76202DFFEA008383C9 /* fonts */,
@@ -91,13 +112,13 @@
 				A01A0C85202E077B008383C9 /* NameViewController.swift */,
 				A01A0C87202E082A008383C9 /* PlantViewController.swift */,
 				71BC38F3202FE4E400FC1B07 /* SetActivityViewController.swift */,
-				71BC38EE202FE4D500FC1B07 /* Activity.swift */,
 				71BC38ED202FE4D500FC1B07 /* NewActivityViewCell.swift */,
-				71BC38F720301F2B00FC1B07 /* NewActivityViewHeader.swift */,
+				7146B4B42030690200F65164 /* SelectedActivitySingleton.swift */,
 				71BC38EF202FE4D500FC1B07 /* NewActivityViewController.swift */,
 				71BC38F5202FEDF800FC1B07 /* Activities.swift */,
 				A01A0C89202E0C01008383C9 /* NameInfo.swift */,
 				A01A0C68202DFC54008383C9 /* Main.storyboard */,
+				7146B4B22030630500F65164 /* ActivityNavigationController.swift */,
 				A01A0C6B202DFC54008383C9 /* Assets.xcassets */,
 				A01A0C6D202DFC54008383C9 /* LaunchScreen.storyboard */,
 				A01A0C70202DFC54008383C9 /* Info.plist */,
@@ -124,6 +145,8 @@
 				A01A0C5D202DFC54008383C9 /* Sources */,
 				A01A0C5E202DFC54008383C9 /* Frameworks */,
 				A01A0C5F202DFC54008383C9 /* Resources */,
+				7146B4B0203053C500F65164 /* Embed Frameworks */,
+				7146B4B12030542E00F65164 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -182,6 +205,24 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7146B4B12030542E00F65164 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Charts.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A01A0C5D202DFC54008383C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -190,9 +231,10 @@
 				71BC38F0202FE4D500FC1B07 /* NewActivityViewCell.swift in Sources */,
 				A01A0C67202DFC54008383C9 /* HomeViewController.swift in Sources */,
 				A0353498202FAC0B00F7A946 /* Plant_entity+CoreDataProperties.swift in Sources */,
-				71BC38F820301F2B00FC1B07 /* NewActivityViewHeader.swift in Sources */,
 				A01A0C65202DFC54008383C9 /* AppDelegate.swift in Sources */,
 				A01A0C88202E082A008383C9 /* PlantViewController.swift in Sources */,
+				7146B4B32030630500F65164 /* ActivityNavigationController.swift in Sources */,
+				7146B4B52030690200F65164 /* SelectedActivitySingleton.swift in Sources */,
 				A01A0C86202E077B008383C9 /* NameViewController.swift in Sources */,
 				71BC38F6202FEDF800FC1B07 /* Activities.swift in Sources */,
 				A035349A202FAC9200F7A946 /* PersistenceService.swift in Sources */,
@@ -200,7 +242,6 @@
 				71BC38F4202FE4E400FC1B07 /* SetActivityViewController.swift in Sources */,
 				71BC38F2202FE4D500FC1B07 /* NewActivityViewController.swift in Sources */,
 				A01A0C8A202E0C01008383C9 /* NameInfo.swift in Sources */,
-				71BC38F1202FE4D500FC1B07 /* Activity.swift in Sources */,
 				71864581202EAF570098921F /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +381,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3M935826C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Happy Ivy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "coco.Happy-Ivy.jake";
@@ -355,6 +400,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F3M935826C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Happy Ivy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "coco.Happy-Ivy.jake";

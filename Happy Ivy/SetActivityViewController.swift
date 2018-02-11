@@ -17,8 +17,6 @@ class SetActivityViewController: UIViewController, UITableViewDataSource  {
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
-    var activitySelected : String!
-    
     // User Managed Object
     var Activity: [NSManagedObject] = []
     
@@ -31,17 +29,21 @@ class SetActivityViewController: UIViewController, UITableViewDataSource  {
         // Derived from http://www.thomashanning.com/uitableview-tutorial-for-beginners/
         tableView.dataSource  = self
         
+        // Get Singleton
+        let selectedActivity = SelectedActivitySingleton.sharedInstance
         
+        /*
         let managedContext = PersistenceService.context
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Activity")
         do { Activity = try managedContext.fetch(fetchRequest) as! [Activity] }
         catch let error as NSError { print("Could not fetch. \(error), \(error.userInfo)") }
-        let activity : Activity = Activity.last! as! Activity
+        let activity : NSObject = Activity[0]//Activity.last! as! Activity
+         */
         
-        activityLabel.text = activity.name // add user's name
+        activityLabel.text = selectedActivity.name
         
-        activityImage.image = UIImage(named: activity.name!)
-        
+        activityImage.image = UIImage(named: selectedActivity.name!)
+
         // Do any additional setup after loading the view.
     }
 

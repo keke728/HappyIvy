@@ -52,19 +52,9 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource, U
         // Do any additional setup after loading the view.
     }
     
-    
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
-                                                                     withReuseIdentifier: "header",
-                                                                     for: indexPath) as! NewActivityViewHeader
-        headerView.label.text = "Personal Care & Health"
-        return headerView
     }
     
     // Derived from https://www.raywenderlich.com/136159/uicollectionview-tutorial-getting-started
@@ -155,18 +145,6 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 1
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let cell = sender as? NewActivityViewCell
-        if(segue.identifier == "goToSetActivity"){
-            let destinationVC:SetActivityViewController = segue.destination as! SetActivityViewController
-            destinationVC.activitySelected = cell?.name
-            
-        }
-    }
-    
-
 
 }
 
