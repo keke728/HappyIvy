@@ -13,6 +13,7 @@ import Charts
 class PlantViewController: UIViewController {
     
     @IBOutlet weak var plantName: UITextField!
+    var plantImageView: UIImageView!
     
     
     // User Managed Object
@@ -29,18 +30,34 @@ class PlantViewController: UIViewController {
         do { plants = try managedContext.fetch(fetchRequest) as! [Plant_entity] }
         catch let error as NSError { print("Could not fetch. \(error), \(error.userInfo)") }
         currentPlant = plants.last!
+        
         //currentPlant?.increaseAir()
+        // status value testing
+        for _ in 0..<15 {
+            currentPlant?.increaseAir()
+            currentPlant?.increaseSun()
+            currentPlant?.increaseLove()
+            currentPlant?.increaseWater()
+        }
         
         plantName.text = currentPlant!.name // add user's name
         
         super.viewDidLoad()
+        
         // set Bounds for chart
-        let viewBounds = self.view.bounds
-        let splitRects = viewBounds.divided(atDistance: viewBounds.height / 3, from: CGRectEdge.minYEdge)
+        let viewBounds = self.view.bounds.divided(atDistance: 48, from: CGRectEdge.maxYEdge).remainder
+        let splitRects = viewBounds.divided(atDistance: viewBounds.height * 2 / 3, from: CGRectEdge.minYEdge)
         let chartBounds = splitRects.remainder
         barChart = BarChartView(frame: chartBounds)
         barChartUpdate()
         self.view.addSubview(barChart)
+        
+        // plant image setup
+        let center = CGPoint(x: viewBounds.width / 2 - 50, y: viewBounds.height / 2 - 60)
+        let size = CGSize(width: 100, height: 120)
+        plantImageView = UIImageView(frame: CGRect(origin: center, size: size))
+        setPlantImage()
+        self.view.addSubview(plantImageView)
         
 
         // Do any additional setup after loading the view.
@@ -54,7 +71,7 @@ class PlantViewController: UIViewController {
         let dataSet = BarChartDataSet(values: [entry1, entry2, entry3, entry4], label: "Stuff")
         let data = BarChartData(dataSets: [dataSet])
         barChart.data = data
-        barChart.chartDescription?.text = "Number of Widgets by Type"
+        barChart.chartDescription?.text = ""
         
         // colors
         dataSet.setColors([NSUIColor.blue, NSUIColor.purple, NSUIColor.orange, NSUIColor.red],
@@ -84,6 +101,20 @@ class PlantViewController: UIViewController {
         
         //This must stay at end of function
         barChart.notifyDataSetChanged()
+    }
+    
+    func setPlantImage() {
+        let avg = ( (currentPlant?.air)! + (currentPlant?.water)! +
+            (currentPlant?.sun)! + (currentPlant?.love)! ) / 4
+        if avg < 33 {
+            plantImageView.image = UIImage(named: "Plant1")
+        }
+        else if avg < 66 {
+            plantImageView.image = UIImage(named: "Plant2")
+            
+        } else {
+            plantImageView.image = UIImage(named: "Plant3")
+        }
     }
 
 }
