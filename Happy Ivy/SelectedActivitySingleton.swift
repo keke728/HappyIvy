@@ -15,6 +15,7 @@ final class SelectedActivitySingleton{
     
     // TODO: Don't use singleton for selected Activity name, figure out how to pass data from selected collection view cell to SetActivityViewController
     var name : String!
+    var type : String!
     
     static let sharedInstance = SelectedActivitySingleton()
     

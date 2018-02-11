@@ -15,6 +15,10 @@ class Activities{
     let PersonalCareAndHealthNames : [Int: String]
     let LifeAndHabitsImages : [Int: UIImage]
     let LifeAndHabitsNames : [Int: String]
+    let ExerciseAndEntertainmentImages : [Int: UIImage]
+    let ExerciseAndEntertainmentNames : [Int: String]
+    let SocialAndCommunityImages : [Int: UIImage]
+    let SocialAndCommunityNames : [Int: String]
     
     // Activity Images
     let tv: UIImage
@@ -42,8 +46,15 @@ class Activities{
         // Fill dictionary with key value pairs
         PersonalCareAndHealthImages = [0: lipstick, 1: dress]
         PersonalCareAndHealthNames = [0: "lipstick", 1: "dress"]
+        
         LifeAndHabitsImages = [0: broom, 1: moon]
         LifeAndHabitsNames = [0: "broom", 1: "moon"]
+        
+        ExerciseAndEntertainmentImages = [0: lipstick, 1: dress]
+        ExerciseAndEntertainmentNames = [0: "lipstick", 1: "dress"]
+        
+        SocialAndCommunityImages = [0: lipstick, 1: dress]
+        SocialAndCommunityNames = [0: "lipstick", 1: "dress"]
         
         //categories = ["personalCareAndHealth": personalCareAndHealthImages, "LifeAndHabits": LifeAndHabitsImages]
         

@@ -105,14 +105,24 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource, U
         case 0:
             let image: UIImage = activities.PersonalCareAndHealthImages[indexPath.row]!
             cell.selectedActivityName = activities.PersonalCareAndHealthNames[indexPath.row]
+            cell.selectedActivityType = "water"
             //selectedActivity = activities.LifeAndHabitsNames[indexPath.row]
             cell.activityButton.setImage(image, for: UIControlState.normal)
         case 1:
             let image: UIImage = activities.LifeAndHabitsImages[indexPath.row]!
             //cell.activityButton.imageView.image = image
             cell.selectedActivityName = activities.LifeAndHabitsNames[indexPath.row]
+            cell.selectedActivityType = "air"
             //selectedActivity = activities.LifeAndHabitsNames[indexPath.row]
             cell.activityButton.setImage(image, for: UIControlState.normal)
+        case 2:
+            let image: UIImage = activities.ExerciseAndEntertainmentImages[indexPath.row]!
+            cell.selectedActivityName = activities.ExerciseAndEntertainmentNames[indexPath.row]
+            cell.selectedActivityType = "sun"
+        case 3:
+            let image: UIImage = activities.SocialAndCommunityImages[indexPath.row]!
+            cell.selectedActivityName = activities.SocialAndCommunityNames[indexPath.row]
+            cell.selectedActivityType = "love"
         default:
             print("no section found")
         }

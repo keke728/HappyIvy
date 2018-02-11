@@ -13,6 +13,7 @@ class NewActivityViewCell: UICollectionViewCell {
      // Derived from https://www.raywenderlich.com/136159/uicollectionview-tutorial-getting-started
     
     var selectedActivityName : String!
+    var selectedActivityType : String!
     
     // User Managed Object
     var Activity: [NSManagedObject] = []
@@ -27,31 +28,9 @@ class NewActivityViewCell: UICollectionViewCell {
         
         print(selectedActivityName)
         
-        /*
-        let managedContext = PersistenceService.context
-        
-        // Declare activity object to hold the first User data entry
-        let activity : NSObject
-        
-        // Initialize an entry in data model.
-        let entity = NSEntityDescription.entity(forEntityName: "Activity", in: managedContext)!
-        activity = NSManagedObject(entity: entity, insertInto: managedContext)
-        
-        /*
-        let objectID = NSManagedObjectID()
-        
-        if objectID.isTemporaryID{
-            
-        }*/
-        */
-        
         let selectedActivity = SelectedActivitySingleton.sharedInstance
         selectedActivity.name = selectedActivityName
-        
-        // Set entry value for name
-        //activity.setValue(name, forKeyPath: "name")
-        //activity
-        print("here")
+        selectedActivity.type = selectedActivityType
     }
     
     

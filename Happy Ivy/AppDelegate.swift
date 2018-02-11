@@ -20,6 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "AveriaSansLibre-Regular", size: 19.0)!], for: .normal)
+        UINavigationBar.appearance().tintColor = UIColor(red:0.718, green:0.525, blue:0.729, alpha:1.0)
+        
         // Get User entity data from Model data model and store in User managed object
         let managedContext = PersistenceService.context
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Plant_entity")

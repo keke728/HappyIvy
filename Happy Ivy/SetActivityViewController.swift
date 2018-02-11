@@ -36,11 +36,16 @@ class SetActivityViewController: UIViewController, UITableViewDataSource  {
         // Get Singleton
         let selectedActivity = SelectedActivitySingleton.sharedInstance
         
-        let saveButton : UIBarButtonItem = UIBarButtonItem(title: "Save", style: UIBarButtonItemStyle.done, target: navigationItem.rightBarButtonItem, action: nil)
+        // Get type of selected activity
+        let selectedActivityType = selectedActivity.type
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(addTapped))
+        //let saveButton : UIBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(addTapped))
         // Add Save Button
         //saveButton.title = "Save"
 
-        navigationItem.setRightBarButton(saveButton, animated: false)
+        
+        //navigationItem.setRightBarButton(saveButton, animated: false)
         
         // Edit textField appearance
         //textField.setFr = 25
@@ -86,6 +91,58 @@ class SetActivityViewController: UIViewController, UITableViewDataSource  {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @objc func addTapped(){
+        
+        // Get Singleton
+        let selectedActivity = SelectedActivitySingleton.sharedInstance
+        
+        // Get type of selected activity
+        let selectedActivityType = selectedActivity.type
+
+        let imageName : String = selectedActivity.name
+        let selectedDate : Date = datePicker.date
+        let selectedName : String = textField.text!
+        let selectedType : String = selectedActivityType!
+        
+        saveActivity(name: selectedName, date: selectedDate, type: selectedType, img: imageName)
+        
+        print("saved")
+    }
+    
+    // MARK: Save
+    
+    /**
+     Saves input string as user name to User entity in Model data model
+     Derived from: https://www.raywenderlich.com/173972/getting-started-with-core-data-tutorial-2
+     - Parameters:
+     - name: the user name to be saved
+     */
+    func saveActivity(name: String, date: Date, type: String, img : String) {
+        
+        // Get Context
+        let managedContext = PersistenceService.context
+        
+        // Declare user object to hold the first User data entry
+        var newActivity : NSObject
+        
+        // Initialize an entry in data model.
+        let entity = NSEntityDescription.entity(forEntityName: "Activity", in: managedContext)!
+        newActivity = NSManagedObject(entity: entity, insertInto: managedContext)
+        
+        // Set entry value for name, date, and type
+        newActivity.setValue(name, forKeyPath: "name")
+        newActivity.setValue(date, forKeyPath: "activity_date")
+        newActivity.setValue(type, forKeyPath: "type")
+        newActivity.setValue(type, forKeyPath: "img_name")
+        
+        // Perform built in save function
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
     }
     
 }
