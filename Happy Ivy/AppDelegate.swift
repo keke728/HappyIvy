@@ -15,21 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     // User managed object
-    var plants: [NSManagedObject] = []
+    var User: [NSManagedObject] = []
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
         // Get User entity data from Model data model and store in User managed object
         let managedContext = PersistenceService.context
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Plant_entity")
-        do { plants = try managedContext.fetch(fetchRequest) }
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "User")
+        do { User = try managedContext.fetch(fetchRequest) }
         catch let error as NSError { print("Could not fetch. \(error), \(error.userInfo)") }
         
         // If no user data, go to view controller
-        if plants.count == 0{
+        if User.count == 0{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "HomeView")
+            let vc = storyboard.instantiateViewController(withIdentifier: "ActivitySelectorView")
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = vc
             self.window?.makeKeyAndVisible()
@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Else go to plant view
         else{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "MainTabView")
+            let vc = storyboard.instantiateViewController(withIdentifier: "ActivitySelectorView")
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = vc
             self.window?.makeKeyAndVisible()
@@ -66,9 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        PersistenceService.saveContext()
     }
-    
     
 }
 
