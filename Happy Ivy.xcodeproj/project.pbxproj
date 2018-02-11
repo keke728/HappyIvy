@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		71864581202EAF570098921F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7186457F202EAF570098921F /* Model.xcdatamodeld */; };
+		71BC38F0202FE4D500FC1B07 /* ActivityCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC38ED202FE4D500FC1B07 /* ActivityCollectionViewCell.swift */; };
+		71BC38F1202FE4D500FC1B07 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC38EE202FE4D500FC1B07 /* Activity.swift */; };
+		71BC38F2202FE4D500FC1B07 /* ActivitySelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC38EF202FE4D500FC1B07 /* ActivitySelectorViewController.swift */; };
+		71BC38F4202FE4E400FC1B07 /* SetActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC38F3202FE4E400FC1B07 /* SetActivityViewController.swift */; };
 		A01A0C65202DFC54008383C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C64202DFC54008383C9 /* AppDelegate.swift */; };
 		A01A0C67202DFC54008383C9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C66202DFC54008383C9 /* HomeViewController.swift */; };
 		A01A0C6A202DFC54008383C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01A0C68202DFC54008383C9 /* Main.storyboard */; };
@@ -24,6 +28,10 @@
 
 /* Begin PBXFileReference section */
 		71864580202EAF570098921F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		71BC38ED202FE4D500FC1B07 /* ActivityCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityCollectionViewCell.swift; sourceTree = "<group>"; };
+		71BC38EE202FE4D500FC1B07 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		71BC38EF202FE4D500FC1B07 /* ActivitySelectorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitySelectorViewController.swift; sourceTree = "<group>"; };
+		71BC38F3202FE4E400FC1B07 /* SetActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetActivityViewController.swift; sourceTree = "<group>"; };
 		A01A0C61202DFC54008383C9 /* Happy Ivy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy Ivy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01A0C64202DFC54008383C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A01A0C66202DFC54008383C9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +86,10 @@
 				A01A0C66202DFC54008383C9 /* HomeViewController.swift */,
 				A01A0C85202E077B008383C9 /* NameViewController.swift */,
 				A01A0C87202E082A008383C9 /* PlantViewController.swift */,
+				71BC38F3202FE4E400FC1B07 /* SetActivityViewController.swift */,
+				71BC38EE202FE4D500FC1B07 /* Activity.swift */,
+				71BC38ED202FE4D500FC1B07 /* ActivityCollectionViewCell.swift */,
+				71BC38EF202FE4D500FC1B07 /* ActivitySelectorViewController.swift */,
 				A01A0C89202E0C01008383C9 /* NameInfo.swift */,
 				A01A0C68202DFC54008383C9 /* Main.storyboard */,
 				A01A0C6B202DFC54008383C9 /* Assets.xcassets */,
@@ -169,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71BC38F0202FE4D500FC1B07 /* ActivityCollectionViewCell.swift in Sources */,
 				A01A0C67202DFC54008383C9 /* HomeViewController.swift in Sources */,
 				A0353498202FAC0B00F7A946 /* Plant_entity+CoreDataProperties.swift in Sources */,
 				A01A0C65202DFC54008383C9 /* AppDelegate.swift in Sources */,
@@ -176,7 +189,10 @@
 				A01A0C86202E077B008383C9 /* NameViewController.swift in Sources */,
 				A035349A202FAC9200F7A946 /* PersistenceService.swift in Sources */,
 				A0353497202FAC0B00F7A946 /* Plant_entity+CoreDataClass.swift in Sources */,
+				71BC38F4202FE4E400FC1B07 /* SetActivityViewController.swift in Sources */,
+				71BC38F2202FE4D500FC1B07 /* ActivitySelectorViewController.swift in Sources */,
 				A01A0C8A202E0C01008383C9 /* NameInfo.swift in Sources */,
+				71BC38F1202FE4D500FC1B07 /* Activity.swift in Sources */,
 				71864581202EAF570098921F /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
