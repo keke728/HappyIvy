@@ -10,6 +10,7 @@ import UIKit
 
 // This class will be a data model for simulations
 // Includes a name and image
+/*
 class Activity {
     
     //MARK: Properties
@@ -33,3 +34,4 @@ class Activity {
     }
     
 }
+*/

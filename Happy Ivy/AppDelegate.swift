@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If no user data, go to view controller
         if plants.count == 0{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "HomeView")
+            let vc = storyboard.instantiateViewController(withIdentifier: "ActivitySelectorView")
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = vc
             self.window?.makeKeyAndVisible()
@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Else go to plant view
         else{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "MainTabView")
+            let vc = storyboard.instantiateViewController(withIdentifier: "ActivitySelectorView")
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = vc
             self.window?.makeKeyAndVisible()

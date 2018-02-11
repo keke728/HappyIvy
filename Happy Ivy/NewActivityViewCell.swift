@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ActivityCollectionViewCell: UICollectionViewCell {
+class NewActivityViewCell: UICollectionViewCell {
      // Derived from https://www.raywenderlich.com/136159/uicollectionview-tutorial-getting-started
-    @IBOutlet weak var activityButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
 
 }

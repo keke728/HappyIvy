@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ActivitySelectorViewController: UIViewController, UICollectionViewDataSource {
+class NewActivityViewController: UIViewController, UICollectionViewDataSource {
 
     // MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Actions
+    
+    
     
     
     
@@ -40,7 +42,7 @@ class ActivitySelectorViewController: UIViewController, UICollectionViewDataSour
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         
         /// Only one section
-        return 3;
+        return 2;
     }
     
     /**
@@ -53,23 +55,7 @@ class ActivitySelectorViewController: UIViewController, UICollectionViewDataSour
      */
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        /// Get the number of simulations
-        //let simCount = fetcher.count
-        
-        /// If there are simulations return the correct amount
-        //if ( simCount > 0 ) {
-        //    collectionView.backgroundView = nil
-        return 3
-        //}
-        /*
-        if ( fetcher.favoriteFilter ) {
-            setBackgroundText("Your favorite simulations will appear here!")
-        }
-        else if ( fetcher.isFiltering ) {
-            setBackgroundText("No results")
-        }*/
-        
-        //return 0
+        return 2
     }
     
     /**
@@ -81,11 +67,28 @@ class ActivitySelectorViewController: UIViewController, UICollectionViewDataSour
      */
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "activityCell", for: indexPath) as! ActivityCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "activityCell", for: indexPath) as! NewActivityViewCell
         
-        let image: UIImage = UIImage(named: "tv")!
+        let activities = Activities()
         
-        cell.activityButton.imageView?.image = image
+        // Set image according to section
+        // e.g PersonalCareAndHealthImages are in first section.  Lipstick is first element
+        // so do set lipstick, use PersonalCareAndHealthImages on section 0 and pick row 0
+        switch indexPath.section{
+        case 0:
+            let image: UIImage = activities.PersonalCareAndHealthImages[indexPath.row]!
+            cell.imageView.image = image
+        case 1:
+            let image: UIImage = activities.LifeAndHabitsImages[indexPath.row]!
+            cell.imageView.image = image
+        default:
+            print("no section found")
+        }
+        
+        //let image: UIImage = UIImage(named: "moon")!
+        //let image: UIImage = activities.activityImages[indexPath.item]!
+        
+        //cell.imageView.image = image
         
         return cell
     }
@@ -135,13 +138,13 @@ class ActivitySelectorViewController: UIViewController, UICollectionViewDataSour
 
 }
 
-extension ActivitySelectorViewController : UICollectionViewDelegateFlowLayout {
+extension NewActivityViewController : UICollectionViewDelegateFlowLayout {
     //1
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         //2
-        let paddingSpace = CGFloat(1 * (3 + 1))
+        let paddingSpace = CGFloat(8)
         let availableWidth = view.frame.width - paddingSpace
         let widthPerItem = availableWidth / 4
         
