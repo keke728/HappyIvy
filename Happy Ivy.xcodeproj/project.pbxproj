@@ -12,6 +12,8 @@
 		7146B4AF203053C500F65164 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7146B4AC203053BD00F65164 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7146B4B32030630500F65164 /* ActivityNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7146B4B22030630500F65164 /* ActivityNavigationController.swift */; };
 		7146B4B52030690200F65164 /* SelectedActivitySingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7146B4B42030690200F65164 /* SelectedActivitySingleton.swift */; };
+		7146B4B92030A65C00F65164 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7146B4B82030A65C00F65164 /* ToDoViewController.swift */; };
+		7146B4BB2030AA9200F65164 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7146B4BA2030AA9200F65164 /* ToDoTableViewCell.swift */; };
 		71864581202EAF570098921F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7186457F202EAF570098921F /* Model.xcdatamodeld */; };
 		71BC38F0202FE4D500FC1B07 /* NewActivityViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC38ED202FE4D500FC1B07 /* NewActivityViewCell.swift */; };
 		71BC38F2202FE4D500FC1B07 /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC38EF202FE4D500FC1B07 /* NewActivityViewController.swift */; };
@@ -49,6 +51,8 @@
 		7146B4AC203053BD00F65164 /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = Carthage/Build/iOS/Charts.framework; sourceTree = "<group>"; };
 		7146B4B22030630500F65164 /* ActivityNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityNavigationController.swift; sourceTree = "<group>"; };
 		7146B4B42030690200F65164 /* SelectedActivitySingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedActivitySingleton.swift; sourceTree = "<group>"; };
+		7146B4B82030A65C00F65164 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
+		7146B4BA2030AA9200F65164 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
 		71864580202EAF570098921F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		71BC38ED202FE4D500FC1B07 /* NewActivityViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewActivityViewCell.swift; sourceTree = "<group>"; };
 		71BC38EF202FE4D500FC1B07 /* NewActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +122,8 @@
 				71BC38F5202FEDF800FC1B07 /* Activities.swift */,
 				A01A0C89202E0C01008383C9 /* NameInfo.swift */,
 				A01A0C68202DFC54008383C9 /* Main.storyboard */,
+				7146B4B82030A65C00F65164 /* ToDoViewController.swift */,
+				7146B4BA2030AA9200F65164 /* ToDoTableViewCell.swift */,
 				7146B4B22030630500F65164 /* ActivityNavigationController.swift */,
 				A01A0C6B202DFC54008383C9 /* Assets.xcassets */,
 				A01A0C6D202DFC54008383C9 /* LaunchScreen.storyboard */,
@@ -233,9 +239,11 @@
 				A0353498202FAC0B00F7A946 /* Plant_entity+CoreDataProperties.swift in Sources */,
 				A01A0C65202DFC54008383C9 /* AppDelegate.swift in Sources */,
 				A01A0C88202E082A008383C9 /* PlantViewController.swift in Sources */,
+				7146B4BB2030AA9200F65164 /* ToDoTableViewCell.swift in Sources */,
 				7146B4B32030630500F65164 /* ActivityNavigationController.swift in Sources */,
 				7146B4B52030690200F65164 /* SelectedActivitySingleton.swift in Sources */,
 				A01A0C86202E077B008383C9 /* NameViewController.swift in Sources */,
+				7146B4B92030A65C00F65164 /* ToDoViewController.swift in Sources */,
 				71BC38F6202FEDF800FC1B07 /* Activities.swift in Sources */,
 				A035349A202FAC9200F7A946 /* PersistenceService.swift in Sources */,
 				A0353497202FAC0B00F7A946 /* Plant_entity+CoreDataClass.swift in Sources */,
