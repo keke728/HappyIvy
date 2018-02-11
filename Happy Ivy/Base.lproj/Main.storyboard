@@ -262,14 +262,18 @@
                                             <rect key="frame" x="0.0" y="0.0" width="41" height="41"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aDt-ba-Ek0">
-                                                    <rect key="frame" x="0.0" y="0.0" width="41" height="41"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gMU-6t-sHs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="41" height="42"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
+                                                    <state key="normal" image="broom"/>
+                                                    <connections>
+                                                        <action selector="activityButtonAction:" destination="F5H-5i-UPE" eventType="touchUpInside" id="Bop-rr-FWe"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
                                         <connections>
-                                            <outlet property="imageView" destination="aDt-ba-Ek0" id="qVb-5Y-vzl"/>
+                                            <outlet property="activityButton" destination="gMU-6t-sHs" id="m36-gc-wCL"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -295,7 +299,7 @@
                         <viewLayoutGuide key="safeArea" id="lG9-F7-TBj"/>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="xUF-dx-A3q" id="5dm-P8-WBB"/>
+                        <outlet property="collectionView" destination="xUF-dx-A3q" id="oPF-Mh-vNM"/>
                         <segue destination="mVa-2O-kLV" kind="show" identifier="setActivitySegue" id="n5i-Kx-GBk"/>
                     </connections>
                 </viewController>
@@ -373,6 +377,7 @@
         <image name="Shelves_bg" width="1242" height="2208"/>
         <image name="To do_bg" width="1242" height="2208"/>
         <image name="To_do_background" width="1242" height="2208"/>
+        <image name="broom" width="94" height="94"/>
         <image name="goalicon" width="30" height="36"/>
         <image name="newActivityBackground" width="1234" height="1775"/>
         <image name="shelficon" width="30" height="23"/>

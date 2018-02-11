@@ -11,7 +11,8 @@ import UIKit
 class NewActivityViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     // MARK: - Outlets
-    @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet var collectionView: UICollectionView!
     
     // MARK: - Actions
     
@@ -24,6 +25,9 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource, U
         //let cellheight : CGFloat = collectionView.frame.size.height - 2.0
         let cellSize = CGSize(width: cellWidth , height:cellWidth)
         
+        // Get activities instance which contains images
+        //let activities = Activities()
+        
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical //.horizontal
         layout.itemSize = cellSize
@@ -31,7 +35,13 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource, U
         layout.minimumLineSpacing = 1.5
         layout.minimumInteritemSpacing = 3.0
         
-        collectionView.hitTest(self, with: UIEvent)
+        //collectionView.hitTest(self, with: UIEvent)
+        
+        /*
+        for cell : NewActivityViewCell in collectionView.visibleCells {
+            let image: UIImage = activities.PersonalCareAndHealthImages[indexPath.row]!
+            cell.activityButton.setImage(image, for: UIControlStateNormal)
+        }*/
         
         collectionView.setCollectionViewLayout(layout, animated: true)
         
@@ -40,7 +50,7 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource, U
         // Do any additional setup after loading the view.
     }
     
-    f
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -100,11 +110,13 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource, U
         switch indexPath.section{
         case 0:
             let image: UIImage = activities.PersonalCareAndHealthImages[indexPath.row]!
-
-            cell.imageView.image = image
+            //cell.name = activities.PersonalCareAndHealthNames[indexPath.row]
+            cell.activityButton.setImage(image, for: UIControlState.normal)
         case 1:
             let image: UIImage = activities.LifeAndHabitsImages[indexPath.row]!
-            cell.imageView.image = image
+            //cell.activityButton.imageView.image = image
+            //cell.name = activities.LifeAndHabitsNames[indexPath.row]
+            cell.activityButton.setImage(image, for: UIControlState.normal)
         default:
             print("no section found")
         }
@@ -113,6 +125,7 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource, U
         return cell
     }
     
+    /*
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // handle tap events
         switch indexPath.section{
@@ -128,7 +141,8 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource, U
             print("no section found")
         }
     }
-
+    */
+    
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {

@@ -10,6 +10,16 @@ import UIKit
 
 class NewActivityViewCell: UICollectionViewCell {
      // Derived from https://www.raywenderlich.com/136159/uicollectionview-tutorial-getting-started
-    @IBOutlet weak var imageView: UIImageView!
-
+    
+    //var name : String!
+    
+    @IBOutlet weak var activityButton: UIButton!
+    
+    @IBAction func activityButtonAction(_ sender: Any) {
+        
+    }
+    
+    
+    
+    
 }

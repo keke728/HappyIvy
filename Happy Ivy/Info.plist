@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string></string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -40,10 +44,6 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string></string>
 	</array>
 	<key>item0</key>
 	<string>AveriaSansLibre-Bold.ttfAveriaSansLibre-BoldItalic.ttfAveriaSansLibre-Italic.ttfAveriaSansLibre-Light.ttfAveriaSansLibre-LightItalic.ttfAveriaSansLibre-Regular.ttf</string>

@@ -12,7 +12,9 @@ class Activities{
     
     // Dictionaries to hold Activity Images in each category
     let PersonalCareAndHealthImages : [Int: UIImage]
+    let PersonalCareAndHealthNames : [Int: String]
     let LifeAndHabitsImages : [Int: UIImage]
+    let LifeAndHabitsNames : [Int: String]
     
     // Activity Images
     let tv: UIImage
@@ -39,7 +41,9 @@ class Activities{
         
         // Fill dictionary with key value pairs
         PersonalCareAndHealthImages = [0: lipstick, 1: dress]
+        PersonalCareAndHealthNames = [0: "lipstick", 1: "dress"]
         LifeAndHabitsImages = [0: broom, 1: moon]
+        LifeAndHabitsNames = [0: "lipstick", 1: "moon"]
         
         //categories = ["personalCareAndHealth": personalCareAndHealthImages, "LifeAndHabits": LifeAndHabitsImages]
         
