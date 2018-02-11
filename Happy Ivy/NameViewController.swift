@@ -67,7 +67,7 @@ extension NameViewController {
     func textFieldShouldReturn(_ nameBox: UITextField) -> Bool {
         // called when 'return' key pressed. return NO to ignore.
         savePlant(name: nameBox.text!)
-        performSegue(withIdentifier: "gotoPlant", sender: NameViewController.self)
+        performSegue(withIdentifier: "gotoTabView", sender: NameViewController.self)
         return true
     }
     
