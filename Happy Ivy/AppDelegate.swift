@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if plants.count == 0{
             //let storyboard = UIStoryboard(name: "ChartStoryboard", bundle: nil)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "ActivitySelectorView")
+            let vc = storyboard.instantiateViewController(withIdentifier: "HomeView")
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = vc
             self.window?.makeKeyAndVisible()
@@ -39,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         else{
             //let storyboard = UIStoryboard(name: "ChartStoryboard", bundle: nil)
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "ActivitySelectorView")
+            let vc = storyboard.instantiateViewController(withIdentifier: "MainTabView")
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = vc
             self.window?.makeKeyAndVisible()
