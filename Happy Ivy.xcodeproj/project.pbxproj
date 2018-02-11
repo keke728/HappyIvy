@@ -13,6 +13,7 @@
 		71BC38F2202FE4D500FC1B07 /* NewActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC38EF202FE4D500FC1B07 /* NewActivityViewController.swift */; };
 		71BC38F4202FE4E400FC1B07 /* SetActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC38F3202FE4E400FC1B07 /* SetActivityViewController.swift */; };
 		71BC38F6202FEDF800FC1B07 /* Activities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC38F5202FEDF800FC1B07 /* Activities.swift */; };
+		71BC38F820301F2B00FC1B07 /* NewActivityViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BC38F720301F2B00FC1B07 /* NewActivityViewHeader.swift */; };
 		A01A0C65202DFC54008383C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C64202DFC54008383C9 /* AppDelegate.swift */; };
 		A01A0C67202DFC54008383C9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01A0C66202DFC54008383C9 /* HomeViewController.swift */; };
 		A01A0C6A202DFC54008383C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A01A0C68202DFC54008383C9 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 		71BC38EF202FE4D500FC1B07 /* NewActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewActivityViewController.swift; sourceTree = "<group>"; };
 		71BC38F3202FE4E400FC1B07 /* SetActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetActivityViewController.swift; sourceTree = "<group>"; };
 		71BC38F5202FEDF800FC1B07 /* Activities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activities.swift; sourceTree = "<group>"; };
+		71BC38F720301F2B00FC1B07 /* NewActivityViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityViewHeader.swift; sourceTree = "<group>"; };
 		A01A0C61202DFC54008383C9 /* Happy Ivy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Happy Ivy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A01A0C64202DFC54008383C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A01A0C66202DFC54008383C9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				71BC38F3202FE4E400FC1B07 /* SetActivityViewController.swift */,
 				71BC38EE202FE4D500FC1B07 /* Activity.swift */,
 				71BC38ED202FE4D500FC1B07 /* NewActivityViewCell.swift */,
+				71BC38F720301F2B00FC1B07 /* NewActivityViewHeader.swift */,
 				71BC38EF202FE4D500FC1B07 /* NewActivityViewController.swift */,
 				71BC38F5202FEDF800FC1B07 /* Activities.swift */,
 				A01A0C89202E0C01008383C9 /* NameInfo.swift */,
@@ -187,6 +190,7 @@
 				71BC38F0202FE4D500FC1B07 /* NewActivityViewCell.swift in Sources */,
 				A01A0C67202DFC54008383C9 /* HomeViewController.swift in Sources */,
 				A0353498202FAC0B00F7A946 /* Plant_entity+CoreDataProperties.swift in Sources */,
+				71BC38F820301F2B00FC1B07 /* NewActivityViewHeader.swift in Sources */,
 				A01A0C65202DFC54008383C9 /* AppDelegate.swift in Sources */,
 				A01A0C88202E082A008383C9 /* PlantViewController.swift in Sources */,
 				A01A0C86202E077B008383C9 /* NameViewController.swift in Sources */,

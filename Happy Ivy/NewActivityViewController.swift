@@ -8,27 +8,51 @@
 
 import UIKit
 
-class NewActivityViewController: UIViewController, UICollectionViewDataSource {
+class NewActivityViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     // MARK: - Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     
     // MARK: - Actions
     
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         collectionView.dataSource  = self
+        
+        let cellWidth : CGFloat = collectionView.frame.size.width / 8.0
+        //let cellheight : CGFloat = collectionView.frame.size.height - 2.0
+        let cellSize = CGSize(width: cellWidth , height:cellWidth)
+        
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical //.horizontal
+        layout.itemSize = cellSize
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+        layout.minimumLineSpacing = 1.5
+        layout.minimumInteritemSpacing = 3.0
+        
+        collectionView.hitTest(self, with: UIEvent)
+        
+        collectionView.setCollectionViewLayout(layout, animated: true)
+        
+        collectionView.reloadData()
 
         // Do any additional setup after loading the view.
     }
+    
+    f
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind,
+                                                                     withReuseIdentifier: "header",
+                                                                     for: indexPath) as! NewActivityViewHeader
+        headerView.label.text = "Personal Care & Health"
+        return headerView
     }
     
     // Derived from https://www.raywenderlich.com/136159/uicollectionview-tutorial-getting-started
@@ -40,8 +64,6 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource {
      - collectionView: The collection view requesting this information.
      */
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
-        /// Only one section
         return 2;
     }
     
@@ -54,7 +76,6 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource {
      - section:        An index number identifying a section in `collectionView`. This index value is 0-based.
      */
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return 2
     }
     
@@ -67,8 +88,10 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource {
      */
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        // Get cell
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "activityCell", for: indexPath) as! NewActivityViewCell
         
+        // Get activities instance which contains images
         let activities = Activities()
         
         // Set image according to section
@@ -77,6 +100,7 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource {
         switch indexPath.section{
         case 0:
             let image: UIImage = activities.PersonalCareAndHealthImages[indexPath.row]!
+
             cell.imageView.image = image
         case 1:
             let image: UIImage = activities.LifeAndHabitsImages[indexPath.row]!
@@ -84,83 +108,36 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource {
         default:
             print("no section found")
         }
-        
-        //let image: UIImage = UIImage(named: "moon")!
-        //let image: UIImage = activities.activityImages[indexPath.item]!
-        
-        //cell.imageView.image = image
+
         
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-        /*
-        if segue.identifier == "setActivitySegue" {
-            
-            guard let webViewController = segue.destination as? WebViewController else {
-                
-                fatalError("Unexpected destination: \(segue.destination)")
-                
-            }
-            
-            guard let selectedSimulationCell = sender as? SimulationTableViewCell else {
-                
-                fatalError("Unexpected sender: \(String(describing: sender))")
-                
-            }
-            
-            guard let indexPath = tableView.indexPath(for: selectedSimulationCell) else{
-                
-                fatalError("The selected cell is not being displayed correctly by the table")
-            }
-            
-            let selectedSimulation = simulations[indexPath.row]
-            
-            webViewController.simulation = selectedSimulation
-            
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // handle tap events
+        switch indexPath.section{
+        case 0:
+            let SetActVC = storyboard?.instantiateViewController(withIdentifier: "SetActivity") as! SetActivityViewController
+            SetActVC.activitySelected = [indexPath.section, indexPath.row]
+            performSegue(withIdentifier: "setActivitySegue", sender: self)
+        case 1:
+            let SetActVC = storyboard?.instantiateViewController(withIdentifier: "SetActivity") as! SetActivityViewController
+            SetActVC.activitySelected = [indexPath.section, indexPath.row]
+            performSegue(withIdentifier: "setActivitySegue", sender: self)
+        default:
+            print("no section found")
         }
-        */
-        
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-
-extension NewActivityViewController : UICollectionViewDelegateFlowLayout {
-    //1
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //2
-        let paddingSpace = CGFloat(8)
-        let availableWidth = view.frame.width - paddingSpace
-        let widthPerItem = availableWidth / 4
-        
-        return CGSize(width: widthPerItem, height: widthPerItem)
-    }
-    
-    //3
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets.zero
     }
-    
-    // 4
+
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 1
     }
+
 }
 

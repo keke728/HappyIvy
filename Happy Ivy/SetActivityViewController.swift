@@ -16,6 +16,8 @@ class SetActivityViewController: UIViewController, UITableViewDataSource  {
     @IBOutlet weak var activityLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    var activitySelected : [Int]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
