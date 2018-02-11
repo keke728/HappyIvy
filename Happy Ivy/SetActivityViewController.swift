@@ -106,7 +106,7 @@ class SetActivityViewController: UIViewController, UITableViewDataSource  {
         let selectedName : String = textField.text!
         let selectedType : String = selectedActivityType!
         
-        saveActivity(name: selectedName, date: selectedDate, type: selectedType, img: imageName)
+        saveActivity(name: selectedName, date: selectedDate, img: imageName)
         
         print("saved")
     }
@@ -119,7 +119,7 @@ class SetActivityViewController: UIViewController, UITableViewDataSource  {
      - Parameters:
      - name: the user name to be saved
      */
-    func saveActivity(name: String, date: Date, type: String, img : String) {
+    func saveActivity(name: String, date: Date, img : String) {
         
         // Get Context
         let managedContext = PersistenceService.context
@@ -134,8 +134,8 @@ class SetActivityViewController: UIViewController, UITableViewDataSource  {
         // Set entry value for name, date, and type
         newActivity.setValue(name, forKeyPath: "name")
         newActivity.setValue(date, forKeyPath: "activity_date")
-        newActivity.setValue(type, forKeyPath: "type")
-        newActivity.setValue(type, forKeyPath: "img_name")
+        //newActivity.setValue(type, forKeyPath: "type")
+        //newActivity.setValue(type, forKeyPath: "img_name")
         
         // Perform built in save function
         do {

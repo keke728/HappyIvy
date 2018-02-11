@@ -13,7 +13,7 @@ class ToDoViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var tableView: UITableView!
     
-    var activities: [Activity] = []
+    var activities: [NSManagedObject] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,8 @@ class ToDoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         //currentPlant = plants.last!
         
         tableView.dataSource  = self
+        
+        self.tabBarController?.tabBar.isHidden = false
         
 
         // Do any additional setup after loading the view.
@@ -48,15 +50,34 @@ class ToDoViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellReuseIdentifier")! as! ToDoTableViewCell
         
+        //if activities.count != 0{
+        
+        //activities =
+            
         let cellActivity = activities[indexPath.row]
         let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = .medium
         let myDate = dateFormatter.string(from: cellActivity.value(forKey: "activity_date") as! Date)
         
-        cell.activityImage.image = UIImage(named: cellActivity.value(forKey: "img_name")! as! String)
+        let imageName : String = cellActivity.value(forKey: "img_name") as! String
+        
+        cell.activityImage.image = UIImage(named: imageName)
         cell.activityName.text = cellActivity.value(forKey: "name") as? String
         cell.time.text = myDate
         
+        let isChecked: Bool = cellActivity.value(forKey: "isComplete") as? Bool ?? false
+        
+        if isChecked{
+            cell.checkButton.imageView?.image = UIImage(named: "checked")
+        }
+        else{
+            cell.checkButton.imageView?.image = UIImage(named: "unchecked")
+        }
+        
+        //cell.backgroundView. = UIImage(named: "newActivityBackground")
+        cell.backgroundView = UIImageView.init(image: UIImage(named: "newActivityBackground"))
+        
+        //}
         //cell.textLabel?.text = text
         return cell
     }

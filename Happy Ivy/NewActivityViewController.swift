@@ -23,7 +23,7 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource, U
         collectionView.dataSource  = self
         
         // Hide tab bar
-        self.tabBarController?.tabBar.isHidden = true
+        //self.tabBarController?.tabBar.isHidden = true
         
         let cellWidth : CGFloat = collectionView.frame.size.width / 8.0
         //let cellheight : CGFloat = collectionView.frame.size.height - 2.0
@@ -105,24 +105,24 @@ class NewActivityViewController: UIViewController, UICollectionViewDataSource, U
         case 0:
             let image: UIImage = activities.PersonalCareAndHealthImages[indexPath.row]!
             cell.selectedActivityName = activities.PersonalCareAndHealthNames[indexPath.row]
-            cell.selectedActivityType = "water"
+            //cell.selectedActivityType = "water"
             //selectedActivity = activities.LifeAndHabitsNames[indexPath.row]
             cell.activityButton.setImage(image, for: UIControlState.normal)
         case 1:
             let image: UIImage = activities.LifeAndHabitsImages[indexPath.row]!
             //cell.activityButton.imageView.image = image
             cell.selectedActivityName = activities.LifeAndHabitsNames[indexPath.row]
-            cell.selectedActivityType = "air"
+            //cell.selectedActivityType = "air"
             //selectedActivity = activities.LifeAndHabitsNames[indexPath.row]
             cell.activityButton.setImage(image, for: UIControlState.normal)
         case 2:
             let image: UIImage = activities.ExerciseAndEntertainmentImages[indexPath.row]!
             cell.selectedActivityName = activities.ExerciseAndEntertainmentNames[indexPath.row]
-            cell.selectedActivityType = "sun"
+            //cell.selectedActivityType = "sun"
         case 3:
             let image: UIImage = activities.SocialAndCommunityImages[indexPath.row]!
             cell.selectedActivityName = activities.SocialAndCommunityNames[indexPath.row]
-            cell.selectedActivityType = "love"
+            //cell.selectedActivityType = "love"
         default:
             print("no section found")
         }
