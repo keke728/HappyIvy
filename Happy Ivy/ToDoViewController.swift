@@ -56,7 +56,7 @@ class ToDoViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
         let cellActivity = activities[indexPath.row]
         let dateFormatter = DateFormatter()
-        dateFormatter.timeStyle = .medium
+        dateFormatter.timeStyle = .short
         let myDate = dateFormatter.string(from: cellActivity.value(forKey: "activity_date") as! Date)
         
         let imageName : String = cellActivity.value(forKey: "img_name") as! String
